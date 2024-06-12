@@ -5,8 +5,8 @@ on:
 
 env: 
   CI_CONTAINER: "ghcr.io/vipm-io/openg-variant-data-library:main"
-  LABVIEW_VERSION: "20.0"
-  LABVIEW_BITNESS: "64"
+  LABVIEW_VERSION: 20.0
+  LABVIEW_BITNESS: 64
 
 jobs:
 
