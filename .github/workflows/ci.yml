@@ -7,6 +7,7 @@ env:
   CI_CONTAINER: "ghcr.io/vipm-io/actions-runner-labview:main"
   LABVIEW_VERSION: 20.0
   LABVIEW_BITNESS: 64
+  DOCKER_USER: "labview"
 
 jobs:
 
@@ -15,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: print working directory
+        run: echo $(pwd)
 
       - uses: actions/setup-python@v5
         with:
