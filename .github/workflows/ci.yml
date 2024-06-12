@@ -74,7 +74,7 @@ jobs:
       - ubuntu-latest
 
     container:
-      image: ${{ github.env.CI_CONTAINER }}
+      image: "ghcr.io/vipm-io/actions-runner-labview:main"
       credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.github_token }}
