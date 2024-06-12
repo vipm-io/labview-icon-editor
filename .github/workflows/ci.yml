@@ -70,7 +70,7 @@ jobs:
       - ubuntu-latest
 
     container:
-      image: "ghcr.io/vipm-io/openg-variant-data-library:main"
+      image: ${{ github.env.CI_CONTAINER }}
       credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.github_token }}
