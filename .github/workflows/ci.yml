@@ -1,16 +1,7 @@
 name: ci-checks
 
 on:
-  workflow_call:
-    inputs:
-      labview-version:
-        required: false
-        default: "20.0"
-        type: string
-      ci-container:
-        required: false
-        default: "ghcr.io/${{ github.repository }}:main"
-        type: string
+  workflow_dispatch:
 
 env: 
   CI_CONTAINER: "ghcr.io/vipm-io/openg-variant-data-library:main"
