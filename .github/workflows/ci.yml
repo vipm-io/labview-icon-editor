@@ -86,7 +86,7 @@ jobs:
         shell: bash
         run: |
           echo "Applying VIPC Starting Display..."
-          source /home/${DOCKER_USER}/start_display.sh
+          source /usr/bin/start_display
           echo "Refreshing Package List..."
           dragon refresh --vipm          
           echo "Applying VIPC file..."
