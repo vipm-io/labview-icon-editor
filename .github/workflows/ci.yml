@@ -1,0 +1,137 @@
+name: ci-checks
+
+on:
+  workflow_call:
+    inputs:
+      labview-version:
+        required: false
+        default: "20.0"
+        type: string
+      ci-container:
+        required: false
+        default: "ghcr.io/${{ github.repository }}:main"
+        type: string
+
+env: 
+  CI_CONTAINER: "ghcr.io/vipm-io/openg-variant-data-library:main"
+  LABVIEW_VERSION: "20.0"
+  LABVIEW_BITNESS: "64"
+
+jobs:
+
+  labview-checks:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          # cache: 'pip'
+          
+
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install pylavi
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv
+          uv pip install pylavi
+
+      - name: Run pylavi Tests
+        shell: bash
+        run: |
+
+          # check if .lvversion file exists and use the workflow inputs labview-version if not
+          if [ -f .lvversion ]; then
+            # read the LabVIEW version from the first line of .lvversion file
+            LV_VERSION="$(head -n 1 .lvversion)"
+            # convert to integer
+            LV_VERSION=` echo $LV_VERSION | sed 's/\..*//' `
+          else
+            # use the workflow input labview-version
+            LV_VERSION=${{ env.LABVIEW_VERSION }}
+          fi
+
+          source .venv/bin/activate
+
+          # print helpful info
+          echo "Verifying:"
+          echo "  - Save Version is $LV_VERSION"
+          echo "  - Separate Compiled Code"
+          echo "  - No Breakpoints"
+
+          # call pylavi
+          vi_validate \
+            --path source \
+            --path tests \
+            --gt $LV_VERSION --lt $((LV_VERSION+1)) \
+            --skip *.vit \
+            --no-code \
+            --breakpoints
+
+
+  caraya-tests:
+
+    runs-on:
+      - ubuntu-latest
+
+    container:
+      image: "ghcr.io/vipm-io/openg-variant-data-library:main"
+      credentials:
+          username: ${{ github.actor }}
+          password: ${{ secrets.github_token }}
+      
+    steps:
+      - uses: actions/checkout@v4    
+      
+      - name: Caraya Tests
+        shell: bash
+        run: |
+          echo "Applying VIPC Starting Display..."
+          source start_display ${{ secrets.NGROK_TOKEN }}
+          echo "Refreshing Package List..."
+          dragon refresh --vipm          
+          echo "Applying VIPC file..."
+          dragon vipm apply-vipc --labview-version ${{ env.LABVIEW_VERSION }} --labview-bitness ${{ env.LABVIEW_BITNESS }} --timeout 600 ./source/.vipc
+          if [ -f "./Tooling/coverage.vi" ]; then
+            echo "Calculating Test Coverage..."
+            g-cli --timeout 600000 "./Tooling/coverage.vi"
+          fi
+          echo "Running unit tests..."
+          g-cli --timeout 600000 Caraya -- -s "tests" -x "report.xml" -v true -r true
+          
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: caraya-test-report
+          path: |
+            ./report.xml
+            ./codecov.json
+
+      - name: Caraya Test Report
+        uses: mikepenz/action-junit-report@v4
+        if: success() || failure() # always run even if the previous step fails
+        with:
+          check_name: Caraya Test Report
+          report_paths: report.xml
+
+      - run: |
+          # these files mess up the codecov report uploader, so remove them
+          rm -f report.xml
+          rm -f "build support/coverage.vi"
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        env:
+          CI: true
+        with:
+          # fail_ci_if_error: true # optional (default = false)
+          # name: codecov-umbrella # optional
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: ${{ github.repository }}
+          verbose: true # optional (default = false)
+          flags: unittests
+          files: "./codecov.json"
