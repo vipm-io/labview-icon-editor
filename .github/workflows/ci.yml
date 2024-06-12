@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env: 
-  CI_CONTAINER: "ghcr.io/vipm-io/openg-variant-data-library:main"
+  CI_CONTAINER: "ghcr.io/vipm-io/actions-runner-labview:main"
   LABVIEW_VERSION: 20.0
   LABVIEW_BITNESS: 64
 
