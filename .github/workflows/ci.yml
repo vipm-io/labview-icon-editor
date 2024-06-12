@@ -7,7 +7,7 @@ env:
   CI_CONTAINER: "ghcr.io/vipm-io/actions-runner-labview:main"
   LABVIEW_VERSION: 20.0
   LABVIEW_BITNESS: 64
-  DOCKER_USER: "labview"
+  DOCKER_USER: "runner"
 
 jobs:
 
