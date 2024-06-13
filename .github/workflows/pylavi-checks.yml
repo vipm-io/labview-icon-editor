@@ -1,0 +1,76 @@
+name: pylavi-checks
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - ci-github-actions
+
+env: 
+  LABVIEW_VERSION: 24.0
+
+jobs:
+
+  labview-checks:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: print working directory
+        run: echo $(pwd)
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          # cache: 'pip'
+          
+
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install pylavi
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv
+          uv pip install pylavi
+
+      - name: Run pylavi Tests
+        shell: bash
+        run: |
+
+          # check if .lvversion file exists and use the workflow inputs labview-version if not
+          if [ -f .lvversion ]; then
+            # read the LabVIEW version from the first line of .lvversion file
+            LV_VERSION="$(head -n 1 .lvversion)"
+            # convert to integer
+            LV_VERSION=` echo $LV_VERSION | sed 's/\..*//' `
+          else
+            # use the workflow input labview-version
+            LV_VERSION=${{ env.LABVIEW_VERSION }}
+          fi
+
+          source .venv/bin/activate
+
+          # print helpful info
+          echo "Verifying:"
+          echo "  - Save Version is $LV_VERSION"
+          echo "  - Separate Compiled Code"
+          echo "  - No Breakpoints"
+
+          # call pylavi
+          vi_validate \
+            --path source \
+            --path tests \
+            # --gt $LV_VERSION \  # uncomment for exactly equal to version
+            # --lt $((LV_VERSION+1)) \
+            --skip *.vit \
+            --no-code \
+            --breakpoints \
+            --no-release False \
+            --no-beta False \
+            --no-alpha True \
+            --no-development True \
+            --no-invalid  True
+
