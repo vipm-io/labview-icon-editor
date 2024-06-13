@@ -70,7 +70,11 @@ jobs:
             --skip *.vit \
             --no-code \
             --breakpoints \
-            --no-invalid
+            --no-release False \
+            --no-beta False \
+            --no-alpha True \
+            --no-development True \
+            --no-invalid  True
 
 
   caraya-tests:
