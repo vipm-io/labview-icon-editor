@@ -9,24 +9,24 @@
 </Property>
 	<Item Name="Private" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		<Item Name="Calculate Number of Text Rows.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Calculate Number of Text Rows.vi"/>
-		<Item Name="Does the Text Fit.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Does the Text Fit.vi"/>
-		<Item Name="Filter Words.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Filter Words.vi"/>
-		<Item Name="Generate Non Text Layer(s).vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Generate Non Text Layer(s).vi"/>
-		<Item Name="Generate Pretty Icon Text Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Generate Pretty Icon Text Layer.vi"/>
-		<Item Name="Library Icon Information.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Library Icon Information.ctl"/>
-		<Item Name="Qualify Library Icon Core.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Qualify Library Icon Core.vi"/>
-		<Item Name="Read 2D Strings From Config.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Read 2D Strings From Config.vi"/>
-		<Item Name="Split First and Other Strings.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Split First and Other Strings.vi"/>
-		<Item Name="Split Text Into Words.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Split Text Into Words.vi"/>
-		<Item Name="User Visible Strings.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/User Visible Strings.vi"/>
+		<Item Name="Calculate Number of Text Rows.vi" Type="VI" URL="../Calculate Number of Text Rows.vi"/>
+		<Item Name="Does the Text Fit.vi" Type="VI" URL="../Does the Text Fit.vi"/>
+		<Item Name="Filter Words.vi" Type="VI" URL="../Filter Words.vi"/>
+		<Item Name="Generate Non Text Layer(s).vi" Type="VI" URL="../Generate Non Text Layer(s).vi"/>
+		<Item Name="Generate Pretty Icon Text Layer.vi" Type="VI" URL="../Generate Pretty Icon Text Layer.vi"/>
+		<Item Name="Library Icon Information.ctl" Type="VI" URL="../Library Icon Information.ctl"/>
+		<Item Name="Qualify Library Icon Core.vi" Type="VI" URL="../Qualify Library Icon Core.vi"/>
+		<Item Name="Read 2D Strings From Config.vi" Type="VI" URL="../Read 2D Strings From Config.vi"/>
+		<Item Name="Split First and Other Strings.vi" Type="VI" URL="../Split First and Other Strings.vi"/>
+		<Item Name="Split Text Into Words.vi" Type="VI" URL="../Split Text Into Words.vi"/>
+		<Item Name="User Visible Strings.vi" Type="VI" URL="../User Visible Strings.vi"/>
 	</Item>
 	<Item Name="Public" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-		<Item Name="Adjust Text to Fit Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Adjust Text to Fit Rectangle.vi"/>
-		<Item Name="Set Icon.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Set Icon.vi"/>
+		<Item Name="Adjust Text to Fit Rectangle.vi" Type="VI" URL="../Adjust Text to Fit Rectangle.vi"/>
+		<Item Name="Set Icon.vi" Type="VI" URL="../Set Icon.vi"/>
 	</Item>
-	<Item Name="Read 1D Strings From Config.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Text Icon/Read 1D Strings From Config.vi">
+	<Item Name="Read 1D Strings From Config.vi" Type="VI" URL="../Read 1D Strings From Config.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 </Library>

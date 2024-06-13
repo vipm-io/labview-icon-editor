@@ -7,8 +7,8 @@
 	<Property Name="NI.LV.All.SaveVersion" Type="Str">21.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Friends List" Type="Friends List">
-		<Item Name="lv_icon.lvlib" Type="Friended Library" URL="/&lt;vilib&gt;/LabVIEW Icon API/lv_icon/lv_icon.lvlib"/>
+		<Item Name="lv_icon.lvlib" Type="Friended Library" URL="../../../vi.lib/LabVIEW Icon API/lv_icon/lv_icon.lvlib"/>
 	</Item>
-	<Item Name="Download iconlibrary files.vi" Type="VI" URL="/&lt;resource&gt;/plugins/NIIconEditor/Miscellaneous/ni.com_iconlibrary/Download iconlibrary files.vi"/>
-	<Item Name="GET HTTP.vi" Type="VI" URL="/&lt;resource&gt;/plugins/NIIconEditor/Miscellaneous/ni.com_iconlibrary/GET HTTP.vi"/>
+	<Item Name="Download iconlibrary files.vi" Type="VI" URL="../NIIconEditor/Miscellaneous/ni.com_iconlibrary/Download iconlibrary files.vi"/>
+	<Item Name="GET HTTP.vi" Type="VI" URL="../NIIconEditor/Miscellaneous/ni.com_iconlibrary/GET HTTP.vi"/>
 </Library>

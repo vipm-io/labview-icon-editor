@@ -8,43 +8,43 @@
 
 </Property>
 	<Item Name="Controls" Type="Folder">
-		<Item Name="API_Rectangle Colors.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/API_Rectangle Colors.ctl"/>
-		<Item Name="API_Rectangle Dimension.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/API_Rectangle Dimension.ctl"/>
-		<Item Name="API_Test Settings.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/API_Test Settings.ctl"/>
-		<Item Name="API_Text Colors.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/API_Text Colors.ctl"/>
-		<Item Name="API_Text.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/API_Text.ctl"/>
-		<Item Name="API_User Layer Data.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/API_User Layer Data.ctl"/>
+		<Item Name="API_Rectangle Colors.ctl" Type="VI" URL="../API_Rectangle Colors.ctl"/>
+		<Item Name="API_Rectangle Dimension.ctl" Type="VI" URL="../API_Rectangle Dimension.ctl"/>
+		<Item Name="API_Test Settings.ctl" Type="VI" URL="../API_Test Settings.ctl"/>
+		<Item Name="API_Text Colors.ctl" Type="VI" URL="../API_Text Colors.ctl"/>
+		<Item Name="API_Text.ctl" Type="VI" URL="../API_Text.ctl"/>
+		<Item Name="API_User Layer Data.ctl" Type="VI" URL="../API_User Layer Data.ctl"/>
 	</Item>
 	<Item Name="Examples" Type="Folder">
-		<Item Name="Advanced Generate LV Icon.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Examples/Advanced Generate LV Icon.vi"/>
-		<Item Name="Basic Generate LV Icon Template Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Examples/Basic Generate LV Icon Template Layer.vi"/>
-		<Item Name="Basic Generate LV Icon Text Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Examples/Basic Generate LV Icon Text Layer.vi"/>
-		<Item Name="Modify VI Icon Template Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Examples/Modify VI Icon Template Layer.vi"/>
-		<Item Name="Modify VI Icon Text Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Examples/Modify VI Icon Text Layer.vi"/>
+		<Item Name="Advanced Generate LV Icon.vi" Type="VI" URL="../Examples/Advanced Generate LV Icon.vi"/>
+		<Item Name="Basic Generate LV Icon Template Layer.vi" Type="VI" URL="../Examples/Basic Generate LV Icon Template Layer.vi"/>
+		<Item Name="Basic Generate LV Icon Text Layer.vi" Type="VI" URL="../Examples/Basic Generate LV Icon Text Layer.vi"/>
+		<Item Name="Modify VI Icon Template Layer.vi" Type="VI" URL="../Examples/Modify VI Icon Template Layer.vi"/>
+		<Item Name="Modify VI Icon Text Layer.vi" Type="VI" URL="../Examples/Modify VI Icon Text Layer.vi"/>
 	</Item>
 	<Item Name="Low Level Functions" Type="Folder">
-		<Item Name="Apply Transparency.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Support/Apply Transparency.vi"/>
-		<Item Name="Generate Border User Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Support/Generate Border User Layer.vi"/>
-		<Item Name="Get Flattened Image.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Get Flattened Image.vi"/>
+		<Item Name="Apply Transparency.vi" Type="VI" URL="../Support/Apply Transparency.vi"/>
+		<Item Name="Generate Border User Layer.vi" Type="VI" URL="../Support/Generate Border User Layer.vi"/>
+		<Item Name="Get Flattened Image.vi" Type="VI" URL="../Get Flattened Image.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-		<Item Name="Create Icon Framework.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Support/Create Icon Framework.vi"/>
-		<Item Name="Create Icon Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/lv_icon/Support/Create Icon Layer.vi"/>
-		<Item Name="Draw Template Glyph.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Support/Draw Template Glyph.vi"/>
-		<Item Name="Extract Default Icon Data.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/lv_icon/Support/Extract Default Icon Data.vi"/>
-		<Item Name="Extract Icon Data.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/lv_icon/Support/Extract Icon Data.vi"/>
-		<Item Name="Get Data from Icon Class.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Support/Get Data from Icon Class.vi"/>
-		<Item Name="Get Icon Class from Data.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Support/Get Icon Class from Data.vi"/>
-		<Item Name="Populate Body Text Data.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Support/Populate Body Text Data.vi"/>
-		<Item Name="Rotate Flip Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Support/Rotate Flip Layer.vi"/>
+		<Item Name="Create Icon Framework.vi" Type="VI" URL="../Support/Create Icon Framework.vi"/>
+		<Item Name="Create Icon Layer.vi" Type="VI" URL="../lv_icon/Support/Create Icon Layer.vi"/>
+		<Item Name="Draw Template Glyph.vi" Type="VI" URL="../Support/Draw Template Glyph.vi"/>
+		<Item Name="Extract Default Icon Data.vi" Type="VI" URL="../lv_icon/Support/Extract Default Icon Data.vi"/>
+		<Item Name="Extract Icon Data.vi" Type="VI" URL="../lv_icon/Support/Extract Icon Data.vi"/>
+		<Item Name="Get Data from Icon Class.vi" Type="VI" URL="../Support/Get Data from Icon Class.vi"/>
+		<Item Name="Get Icon Class from Data.vi" Type="VI" URL="../Support/Get Icon Class from Data.vi"/>
+		<Item Name="Populate Body Text Data.vi" Type="VI" URL="../Support/Populate Body Text Data.vi"/>
+		<Item Name="Rotate Flip Layer.vi" Type="VI" URL="../Support/Rotate Flip Layer.vi"/>
 	</Item>
-	<Item Name="Generate LV Icon Template Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Generate LV Icon Template Layer.vi"/>
-	<Item Name="Generate LV Icon Text Layer.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Generate LV Icon Text Layer.vi"/>
-	<Item Name="Generate LV Icon User Layers.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Generate LV Icon User Layers.vi"/>
-	<Item Name="Get Library Icon.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Get Library Icon.vi"/>
-	<Item Name="Get VI Icon.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Get VI Icon.vi"/>
-	<Item Name="Launch Icon Editor.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Launch Icon Editor.vi"/>
-	<Item Name="Set Library Icon.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set Library Icon.vi"/>
-	<Item Name="Set VI Icon.vi" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/Set VI Icon.vi"/>
+	<Item Name="Generate LV Icon Template Layer.vi" Type="VI" URL="../Generate LV Icon Template Layer.vi"/>
+	<Item Name="Generate LV Icon Text Layer.vi" Type="VI" URL="../Generate LV Icon Text Layer.vi"/>
+	<Item Name="Generate LV Icon User Layers.vi" Type="VI" URL="../Generate LV Icon User Layers.vi"/>
+	<Item Name="Get Library Icon.vi" Type="VI" URL="../Get Library Icon.vi"/>
+	<Item Name="Get VI Icon.vi" Type="VI" URL="../Get VI Icon.vi"/>
+	<Item Name="Launch Icon Editor.vi" Type="VI" URL="../Launch Icon Editor.vi"/>
+	<Item Name="Set Library Icon.vi" Type="VI" URL="../Set Library Icon.vi"/>
+	<Item Name="Set VI Icon.vi" Type="VI" URL="../Set VI Icon.vi"/>
 </Library>
