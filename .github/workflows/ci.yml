@@ -69,7 +69,8 @@ jobs:
             --lt $((LV_VERSION+1)) \
             --skip *.vit \
             --no-code \
-            --breakpoints
+            --breakpoints \
+            --no-invalid
 
 
   caraya-tests:
