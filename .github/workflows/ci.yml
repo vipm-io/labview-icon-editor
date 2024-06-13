@@ -66,7 +66,7 @@ jobs:
             --path source \
             --path tests \
             # --gt $LV_VERSION \  # uncomment for exactly equal to version
-            --lt $((LV_VERSION+1)) \
+            # --lt $((LV_VERSION+1)) \
             --skip *.vit \
             --no-code \
             --breakpoints \
