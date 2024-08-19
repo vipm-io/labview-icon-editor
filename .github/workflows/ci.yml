@@ -20,7 +20,8 @@ jobs:
       - ubuntu-latest
 
     container:
-      image: "ghcr.io/vipm-io/actions-runner-labview:main"
+      image: "ghcr.io/vipm-io/labview-icon-editor:ci-github-actions"
+      # image: "ghcr.io/vipm-io/actions-runner-labview:main"
       credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.github_token }}
