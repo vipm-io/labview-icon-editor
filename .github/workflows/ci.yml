@@ -74,6 +74,7 @@ jobs:
 
     container:
       image: ghcr.io/vipm-io/actions-runner-labview-2024-linux:dev
+      options: --user labview
       credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.github_token }}
