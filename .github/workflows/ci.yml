@@ -84,6 +84,7 @@ jobs:
         with:
           clean: false
           set-safe-directory: false
+          persist-credentials: false
       
       - name: Caraya Tests
         shell: bash
